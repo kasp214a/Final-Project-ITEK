@@ -213,7 +213,7 @@ int main(int argc, char **argv)
   // ROS publishing setup
   ros::init(argc,argv, "mmwave_talker");
   ros::NodeHandle n;                      // create nodehanlder 
-  ros::Publisher mmwave_pub = n.advertise<sensor_msgs::Range>("MMwave/range", 1000); // create the informaiton about the publishing 
+  ros::Publisher mmwave_pub = n.advertise<sensor_msgs::Range>("/platform/ultrasound/combined", 1000); // create the informaiton about the publishing 
   float y_coords[128];                    // creatte an array to hold the y_coordinats to be published 
 
   while(true)
